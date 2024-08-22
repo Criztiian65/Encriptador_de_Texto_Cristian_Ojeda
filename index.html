@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="shortcut icon" href="./img/Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/stylex.css">
+</head>
+
+<body>
+    <head class="nav">
+        <img src="./img/Logo.png" alt="Logo de la pagina de encriptación">
+    </head>
+
+    <main>
+         <h1>Ingrese texto aquí!</h1>
+        <section class="section_text">
+            <div>
+                <textarea class="container_text" name="text_area" id="in_text" placeholder="Ingrese texto aquí!"></textarea>
+            </div>
+
+            <div class="box_out_text" id="text_out"></div>
+            <div class="error_Text" id="error_Text"></div>
+
+        </section>
+
+        <div class="contenedor_btn">
+            <p><img src="./img/bi_exclamation-circle-fill.png" alt="simbolo de exclamacion"> Solo letras minúsculas y sin acentos</p>
+            <div>
+                <button class="btn_encriptar" id="btn_encriptar">Encriptar!</button>
+                <button class="btn_desencriptar" id="btn_desencriptar">Desencriptar!</button>
+            </div>
+
+        </div>
+
+        <div >
+            <button class="btn_copy" id="btn_copy">Copiar texto</button>
+        </div>
+        
+         
+    </main>
+
+    <footer>
+        <p>Creado por: Cristian Ojedea</p>
+    </footer>
+</body>
+<script src="./app.js"></script>
+</html>

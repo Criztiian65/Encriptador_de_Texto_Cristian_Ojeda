@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --color-primario: #655a7c;
+    --color-secundario: #ab92bf;
+    --color-terciario: #afc1d6;
+    --color-hover: #8CA1BA;
+    --border-radius: 1.2rem
+}
+
+body{
+    background-color: var(--color-primario);
+}
+
+section{
+    display: flex;
+    height: 30rem;
+    justify-content: space-around;
+}
+
+.contenedor_texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35rem;
+    justify-content: space-evenly;
+    background-color: var(--color-secundario);
+    border-radius: var(--border-radius);
+    padding: 1.2rem;
+}
+
+.text_area{
+    border: none;
+    resize: none;
+    outline: none;
+    background-color: var(--color-secundario);
+    height: 20rem;
+    width: 35rem;
+    font-size: 1.5rem;
+
+}
+
+.error_text{
+    visibility: hidden;
+    justify-content: center;
+    padding: 1rem ;
+    margin: auto;
+}
+
+.contenedor_pie_box{
+    margin:auto;
+    text-align: center;
+    width: 35rem;
+}
+
+.contenedor_btn{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn_encriptar{
+    box-sizing: border-box;
+    width: 10rem;
+    padding: 0.5rem;
+    border: 2.5px solid transparent;
+    border-radius: 0.5rem;
+    background-color: var(--color-primario);
+    color: var(--color-terciario);
+}
+
+.btn_desencriptar{
+    box-sizing: border-box;
+    width: 10rem;
+    padding: 0.5rem;
+    border: 2.5px solid var(--color-primario);
+    border-radius: 0.5rem;
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+}
+
+.btn_copy{
+    box-sizing: border-box;
+    width: 10rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-top: 3rem;
+    border: 2.5px solid transparent;
+    background-color: var(--color-primario);
+    color: var(--color-terciario);
+}
+
+
+.btn_encriptar:hover{
+    border: 2.5px solid var(--color-terciario);
+}
+
+.btn_desencriptar:hover{
+    border: 2.5px solid var(--color-terciario);
+}
+
+.btn_copy:hover{
+    border: 2.5px solid var(--color-terciario);
+}
+
+button:active {
+    transition: all, 10ms ease;
+    background-color: var(--color-terciario);
+    color: var(--color-primario);
+    transform: scale(0.9);
+    box-shadow: 0px 0px 15px #616060;
+}
+
+.contenedor_salida{
+    width: 25rem;
+    background-color: var(--color-secundario);
+    border-radius: var(--border-radius);
+    padding: 1.2rem;
+}
+
+.box_out_text{
+    border: 20px;
+    overflow-y: auto;
+    height: 20rem;
+    width: 22rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.contenedor_inicial{
+    align-items: center;
+    display: flex; 
+    flex-direction: column;
+    
+}
+
+.imagen_inicial{
+    margin:auto;
+}
+
+.texto_inicial{
+    margin-top: 3rem;
+}
+
+.reemplazo{
+    display: none;
+}
+

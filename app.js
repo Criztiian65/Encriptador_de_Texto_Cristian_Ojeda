@@ -4,6 +4,8 @@ const btnDesncriptar = document.getElementById('btn_desencriptar')
 const btnCopy = document.getElementById('btn_copy')
 const mostrarTexto = document.getElementById('text_out')
 const divError = document.getElementById('error_Text')
+// const contInicial = document.getElementById('contenedor_inicial')
+// const contReemplazo = document.getElementById('contenedor_reemplazo')
 
 // Espresión regular para validar que el texto sea solamente en minuscula, sin acentos
 const textoValido = /^[a-z\s]+$/;
@@ -20,7 +22,7 @@ const encriptar = (textoOriginal) => {
          
       }
 
-   mostrarTexto.innerHTML = textoEncriptado ;
+   mostrarTexto.innerHTML = `<p clas="box_out_text">${textoEncriptado}</p>`
       
 }
 
@@ -72,7 +74,7 @@ const copiarTexto = () => {
          
       // Verifica si hay texto en el div para copiar
       if (textoFinal) {
-         // Usar la API del portapapeles para copiar el texto
+         // Utilizo la API del portapapeles para copiar el texto
          navigator.clipboard.writeText(textoFinal)
             .then(() => {
                   alert('Texto copiado al portapapeles');
@@ -91,30 +93,35 @@ const copiarTexto = () => {
 btnEncriptar.onclick = function () {
    let textoOriginal = document.getElementById('in_text').value;
 
-   //Validación de la cadena de texto
+   // Validación de la cadena de texto
    if (textoValido.test(textoOriginal)) {
       encriptar(textoOriginal);
       document.getElementById("in_text").value = "";
-      divError.hidden
+      divError.style.visibility = "hidden";
+      document.getElementById('contenedor_inicial').classList.add('reemplazo');
+      document.getElementById('contenedor_reemplazo').classList.remove('reemplazo');
    }else{
-      divError.innerText='Escriba el texto solo en minúscula y sin acentos por favor';
+      divError.style.visibility = "visible"
+      
    }    
 }
-    
+
 // Evento para el boton de "Desencriptar"
 btnDesncriptar.onclick = function () {
    let textoEncriptado = document.getElementById('in_text').value;
-console.log(textoEncriptado);
-
+   console.log(textoEncriptado);
+   
    //Validación de la cadena de texto
    if (textoValido.test(textoEncriptado)) {
       desencriptarTexto(textoEncriptado);
       document.getElementById('in_text').value = '';
-
+      divError.style.visibility = "hidden";
+      contInicial.classList.add = "reemplazo";
+      contReemplazo.classList.remove = "reemplazo";
    }else{
-      divError.innerText='Escriba el texto solo en minúscula y sin acentos por favor'
+      divError.style.visibility = "visible"
    }
-
+   
 }
 
 // Evento para el boton copiar

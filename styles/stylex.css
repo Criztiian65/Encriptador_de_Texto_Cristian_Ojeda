@@ -14,15 +14,14 @@ html, body {
     height: 100%;
 }
 main{
-    flex: 1;
     display: flex;
-    align-items: center;
+    flex: 1;
 }
 body{
-    background-color: var(--color-primario);
-    min-height: 100%;
     display: flex;
     flex-direction: column;   
+    background-color: var(--color-primario);
+    min-height: 100vh;
 }
 
 .nav{
@@ -31,7 +30,7 @@ body{
 }
 
 .contenedor_img{
-    padding: 1rem;
+    padding: 1rem 1.7rem 1rem;
 }
 
 section{
@@ -46,7 +45,6 @@ section{
     flex-direction: column;
     align-items: center;
     width: 35rem;
-    justify-content: space-evenly;
     background-color: var(--color-secundario);
     border-radius: var(--border-radius);
     padding: 1.2rem;
@@ -60,20 +58,17 @@ section{
     height: 20rem;
     width: 35rem;
     font-size: 1.5rem;
-
 }
 
 .error_text{
     visibility: hidden;
-    justify-content: center;
     padding: 1rem ;
-    margin: auto;
 }
 
 .contenedor_pie_box{
     margin:auto;
     text-align: center;
-    width: 35rem;
+    width: -webkit-fill-available;
 }
 
 .contenedor_btn{
@@ -82,31 +77,26 @@ section{
     justify-content: space-around;
 }
 
-.btn_encriptar{
+.tamaño_btn{
     box-sizing: border-box;
     width: 10rem;
     padding: 0.5rem;
-    border: 2.5px solid transparent;
     border-radius: 0.5rem;
+}
+
+.btn_encriptar{
+    border: 2.5px solid transparent;
     background-color: var(--color-primario);
     color: var(--color-terciario);
 }
 
 .btn_desencriptar{
-    box-sizing: border-box;
-    width: 10rem;
-    padding: 0.5rem;
     border: 2.5px solid var(--color-primario);
-    border-radius: 0.5rem;
     background-color: var(--color-secundario);
     color: var(--color-primario);
 }
 
 .btn_copy{
-    box-sizing: border-box;
-    width: 10rem;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
     margin-top: 3rem;
     border: 2.5px solid transparent;
     background-color: var(--color-primario);
@@ -114,15 +104,7 @@ section{
 }
 
 
-.btn_encriptar:hover{
-    border: 2.5px solid var(--color-terciario);
-}
-
-.btn_desencriptar:hover{
-    border: 2.5px solid var(--color-terciario);
-}
-
-.btn_copy:hover{
+.btn_encriptar:hover, .btn_desencriptar:hover, .btn_copy:hover {
     border: 2.5px solid var(--color-terciario);
 }
 
@@ -170,7 +152,46 @@ button:active {
     display: none;
 }
 
-.footer{
+footer{
     display: flex;
     justify-content: center;
 }
+
+@media (max-width: 1200px) {
+    section{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedor_salida{
+        margin-top: 3rem;
+        width: 35rem;
+    }
+
+    main{
+        overflow: auto;
+    }
+    
+}
+
+@media (max-width: 426px) {
+    section{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedor_texto{
+        width: 100%;
+    }
+
+    .contenedor_salida{
+        margin-top: 3rem;
+        width: 100%;
+    }
+
+    main{
+        overflow: auto;
+    }
+    
+}
+

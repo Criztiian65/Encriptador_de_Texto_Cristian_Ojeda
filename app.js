@@ -4,8 +4,6 @@ const btnDesncriptar = document.getElementById('btn_desencriptar')
 const btnCopy = document.getElementById('btn_copy')
 const mostrarTexto = document.getElementById('text_out')
 const divError = document.getElementById('error_Text')
-// const contInicial = document.getElementById('contenedor_inicial')
-// const contReemplazo = document.getElementById('contenedor_reemplazo')
 
 // Espresión regular para validar que el texto sea solamente en minuscula, sin acentos
 const textoValido = /^[a-z\s]+$/;
@@ -116,8 +114,8 @@ btnDesncriptar.onclick = function () {
       desencriptarTexto(textoEncriptado);
       document.getElementById('in_text').value = '';
       divError.style.visibility = "hidden";
-      contInicial.classList.add = "reemplazo";
-      contReemplazo.classList.remove = "reemplazo";
+      document.getElementById('contenedor_inicial').classList.add('reemplazo');
+      document.getElementById('contenedor_reemplazo').classList.remove('reemplazo');
    }else{
       divError.style.visibility = "visible"
    }

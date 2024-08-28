@@ -54,9 +54,11 @@ section{
     border: none;
     resize: none;
     outline: none;
+    box-sizing: border-box;
     background-color: var(--color-secundario);
-    height: 20rem;
-    width: 35rem;
+    padding: 0 1.2rem 0 1.2rem;
+    height: 100%;
+    width: 100%;
     font-size: 1.5rem;
 }
 
@@ -68,7 +70,7 @@ section{
 .contenedor_pie_box{
     margin:auto;
     text-align: center;
-    width: -webkit-fill-available;
+    width: 100%;
 }
 
 .contenedor_btn{
@@ -130,13 +132,14 @@ button:active {
     width: 22rem;
     font-size: 1.5rem;
     padding: 1rem;
+    overflow-wrap: break-word;
 }
 
 .contenedor_inicial{
     align-items: center;
     display: flex; 
     flex-direction: column;
-    
+    padding: 1.2rem;
 }
 
 .imagen_inicial{
@@ -181,14 +184,39 @@ footer{
     }
 
     .contenedor_texto{
-        width: 100%;
+        width: auto;
     }
 
+    .text_area{
+        height: 15rem;
+        width: 100%;
+        padding: 0 1.2rem 0 1.2rem;
+        box-sizing: border-box;
+    }
     .contenedor_salida{
         margin-top: 3rem;
-        width: 100%;
+        width: auto;
     }
 
+    
+    .contenedor_btn{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 6rem;
+        justify-content: space-between;
+        padding: 1rem 0 1rem 0;
+    }
+
+    .box_out_text{ 
+        padding: 0 1.2rem 0 1.2rem;
+        box-sizing: border-box;
+        overflow-wrap: anywhere;
+    }
+
+    .tamaño_btn{
+        width: 100%;
+    }
     main{
         overflow: auto;
     }
